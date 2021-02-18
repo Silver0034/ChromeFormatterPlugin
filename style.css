@@ -1,0 +1,127 @@
+/* * Root */
+:root {
+	/* variables */
+	--blue: #42a5f5;
+	--duration: 0.2s;
+	--border-radius: 3px;
+}
+
+/* * General Styles */
+body {
+	margin: 0;
+	padding: 0;
+
+	/* font */
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+	font-family: inherit;
+}
+
+header,
+section {
+	position: relative;
+	padding: 10px;
+}
+
+.gray {
+	background-color: #f9f9f9;
+	padding: 20px 10px;
+	border: 0 solid #dfe9f1;
+	border-width: 2px 0 2px 0;
+}
+
+label {
+	display: block;
+	margin-bottom: 0.5em;
+	font-weight: bold;
+	color: gray;
+}
+
+button {
+	border: none;
+	border-radius: var(--border-radius);
+	background-color: var(--blue);
+	color: white;
+	padding: 0.5em 1em;
+	cursor: pointer;
+	transition-duration: var(--duration);
+	transition-property: background-color;
+	white-space: nowrap;
+}
+button:hover,
+button:focus,
+button:active {
+	background-color: black;
+}
+textarea {
+	width: 320px;
+	max-height: 300px;
+	resize: vertical;
+	border: 1px solid #9ec5e4;
+	border-radius: var(--border-radius);
+	outline: none;
+	transition-duration: var(--duration);
+	transition-property: border, box-shadow;
+	padding: 0.5em;
+}
+textarea:focus,
+textarea:hover {
+	border-color: var(--blue);
+	box-shadow: 0 0 0pt 1px var(--blue);
+}
+textarea::placeholder {
+	color: #c3cad0;
+}
+
+/* * JSON Formatter Specific Elements */
+/* In the header */
+header {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+}
+
+#logo {
+	height: 30px;
+	margin-right: 1ch;
+}
+
+#title {
+	font-size: 20px;
+}
+
+#tag {
+	padding-left: 1ch;
+}
+/* In the main section */
+#clear {
+	padding: 0;
+	position: absolute;
+	font-size: 0.75em;
+	bottom: 5px;
+	right: 10px;
+	font-weight: bold;
+}
+/* Error message */
+#error {
+	margin: 0;
+	color: red;
+	width: 100%;
+	line-height: 2em;
+	overflow: auto;
+	max-height: 10em;
+	transition: max-height 0.3s ease-out;
+}
+#error.hidden {
+	overflow: scroll-y;
+	max-height: 0px;
+}
+
+/* copy button */
+#copy,
+#clear {
+	color: var(--blue);
+	background: none;
+}

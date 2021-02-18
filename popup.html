@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatter by jlodes</title>
+    <script src="popup.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="128.png" alt="[]">
+        <h1 id="title">Format JSON</h1>
+        <p id="tag">by jlodes</p>
+    </header>
+    
+    <section class="gray">
+        <label for="input">Paste or type your JSON below</label>
+        <textarea name="input" id="input" cols="30" rows="10" placeholder="Paste or type your JSON here"></textarea>
+        <p id="error" class="hidden">The text is not valid JSON</p>
+        <button id="clear">Clear</button>
+    </section>
+
+    <section id="button-row">
+        <button id="button">Format JSON</button>
+        <button id="copy">Copy JSON</button>
+    </section>
+    
+</body>
+</html>
